@@ -2,4 +2,4 @@
 builder = "nixpacks"
 
 [env]
-BP_JVM_VERSION = "21"
+NIXPACKS_JDK_VERSION = "21"
