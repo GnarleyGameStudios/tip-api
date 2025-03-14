@@ -1,5 +1,5 @@
 [build]
-builder = "paketobuildpacks/builder:base"
+builder = "nixpacks"
 
 [env]
 BP_JVM_VERSION = "21"
