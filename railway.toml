@@ -1,5 +1,6 @@
 [build]
-builder = "paketobuildpacks/builder:base"
+builder = "nixpacks"
+nixpacksConfigPath = "backend_nixpacks.toml"
 
 [env]
-BP_JVM_VERSION = "21"
+NIXPACKS_JDK_VERSION = "21"
