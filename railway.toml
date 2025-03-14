@@ -3,4 +3,4 @@ builder = "nixpacks"
 nixpacksConfigPath = "backend_nixpacks.toml"
 
 [env]
-NIXPACKS_JDK_VERSION = "21"
+BP_JVM_VERSION = "21"
