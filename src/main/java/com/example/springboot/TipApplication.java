@@ -11,6 +11,7 @@ public class TipApplication {
 
 	public static void main(String[] args) {
 		ApplicationContext ctx = SpringApplication.run(TipApplication.class, args);
+		System.out.println("Database URL: " + System.getenv("SPRING_DATASOURCE_URL"));
 	}
 	
 }
