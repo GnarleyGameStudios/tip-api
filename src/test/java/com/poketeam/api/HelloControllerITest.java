@@ -1,4 +1,4 @@
-package com.example.springboot;
+package com.poketeam.api;
 
 import org.junit.jupiter.api.Test;
 
