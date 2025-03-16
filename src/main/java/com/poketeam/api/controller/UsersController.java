@@ -6,15 +6,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+import reactor.core.publisher.Mono;
 
 @RestController
 public class UsersController {
 
-	@Autowired
-	private UsersService usersService;
+    @Autowired
+    private UsersService usersService;
 
-	@PostMapping("/users")
-	public String createUser(@RequestBody UserRO user) {
-		return "user controller endpoint";
-	}
+    @PostMapping("/users")
+    public Mono<UserRO> createUser(@RequestBody UserRO user) {
+        return Mono.just(user);
+    }
 }
