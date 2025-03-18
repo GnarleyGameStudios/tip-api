@@ -1,0 +1,12 @@
+server:
+  port: ${PORT:8080}
+
+spring:
+  r2dbc:
+    url: r2dbc:postgresql://yamanote.proxy.rlwy.net:41494/tip
+    username: postgres
+    password: kuPzFEOZaHbVqheOOCMOSDDkfoHOWoOk
+
+  jpa:
+    hibernate:
+      ddl-auto: update

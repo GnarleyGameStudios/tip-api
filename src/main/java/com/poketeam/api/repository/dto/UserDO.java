@@ -5,9 +5,6 @@ import org.springframework.data.relational.core.mapping.Table;
 import lombok.Data;
 
 @Data
-@Table("user")
+@Table("users")
 public class UserDO {
-    private String username;
-    private String password;
-    private String email;
 }
