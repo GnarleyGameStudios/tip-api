@@ -1,7 +1,12 @@
 package com.poketeam.api.model;
 
+import lombok.Builder;
 import lombok.Data;
 
 @Data
+@Builder
 public class User {
+    private final String username;
+    private final String password;
+    private final String email;
 }
