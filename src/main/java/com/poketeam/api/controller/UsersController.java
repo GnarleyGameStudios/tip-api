@@ -3,7 +3,6 @@ package com.poketeam.api.controller;
 import com.poketeam.api.controller.mapper.UsersMapper;
 import com.poketeam.api.controller.ro.NewUserRO;
 import com.poketeam.api.controller.ro.UserRO;
-import com.poketeam.api.model.User;
 import com.poketeam.api.service.UsersService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -23,7 +22,7 @@ public class UsersController {
                 .map(usersMapper::mapToUserRO);
     }
 
-    //TODO: Implement the following methods
+    //TODO: Implement the following methods JENNY
     @GetMapping("/{id}")
     public Mono<UserRO> getUserById(@PathVariable("id") Long id) {
         return Mono.just(UserRO.builder().id(id).username("user").build());
