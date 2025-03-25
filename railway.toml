@@ -1,6 +1,5 @@
 [build]
 builder = "nixpacks"
-nixpacksConfigPath = "backend_nixpacks.toml"
 
 [env]
 BP_JVM_VERSION = "21"

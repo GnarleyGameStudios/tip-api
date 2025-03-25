@@ -1,7 +1,6 @@
 package com.poketeam.api.repository.dto;
 
 import lombok.Data;
-import lombok.Getter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Table;
 
