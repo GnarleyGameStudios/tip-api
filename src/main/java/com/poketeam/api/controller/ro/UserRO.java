@@ -1,10 +1,11 @@
 package com.poketeam.api.controller.ro;
 
-import lombok.Data;
+import lombok.Builder;
+import lombok.Getter;
 
-@Data
+@Getter
+@Builder
 public class UserRO {
-    private String username;
-    private String password;
-    private String email;
+    private final Long id;
+    private final String username;
 }
