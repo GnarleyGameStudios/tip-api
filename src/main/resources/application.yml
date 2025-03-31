@@ -3,9 +3,9 @@ server:
 
 spring:
   r2dbc:
-    url: r2dbc:postgresql://yamanote.proxy.rlwy.net:41494/tip
-    username: postgres
-    password: kuPzFEOZaHbVqheOOCMOSDDkfoHOWoOk
+    url: ${SPRING_DATASOURCE_URL}
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
 
   jpa:
     hibernate:

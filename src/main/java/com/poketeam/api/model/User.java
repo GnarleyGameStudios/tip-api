@@ -1,17 +1,15 @@
 package com.poketeam.api.model;
 
-import lombok.Builder;
-import lombok.Getter;
+import lombok.Data;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Table;
 
-import java.time.LocalDateTime;
-
-@Getter
-@Builder
+@Data
+@Table("users")
 public class User {
-    private final Long id;
-    private final String username;
-    private final String password;
-    private final String email;
-    private final LocalDateTime createdDateTime;
-    private final LocalDateTime lastLoginDateTime;
+    @Id
+    private Long user_id;
+    private String user_name;
+    private String password;
+    private String email;
 }

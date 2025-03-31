@@ -1,9 +1,9 @@
 package com.poketeam.api.repository;
 
-import com.poketeam.api.repository.dto.UserDO;
+import com.poketeam.api.model.User;
 import org.springframework.data.repository.reactive.ReactiveCrudRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface UserRepository extends ReactiveCrudRepository<UserDO, Long> {
+public interface UserRepository extends ReactiveCrudRepository<User, Long> {
 }

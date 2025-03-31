@@ -1,18 +1,18 @@
-package com.poketeam.api.service.mapper;
+package com.poketeam.api.model.mapper;
 
+import com.poketeam.api.controller.ro.NewUserRO;
+import com.poketeam.api.controller.ro.UserRO;
 import com.poketeam.api.model.User;
-import com.poketeam.api.repository.dto.UserDO;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
 @Mapper(componentModel = "spring")
-public interface UsersDOMapper {
+public interface UsersMapper {
 
     @Mapping(target = "user_name", source = "username")
-    @Mapping(target = "user_id", source = "id")
-    UserDO mapToUserDO(User user);
+    User mapToUser(NewUserRO newUserRO);
 
     @Mapping(target = "username", source = "user_name")
     @Mapping(target = "id", source = "user_id")
-    User mapToUser(UserDO userDO);
+    UserRO mapToUserRO(User user);
 }

@@ -1,6 +1,6 @@
 package com.poketeam.api.controller;
 
-import com.poketeam.api.controller.mapper.UsersMapper;
+import com.poketeam.api.model.mapper.UsersMapper;
 import com.poketeam.api.controller.ro.NewUserRO;
 import com.poketeam.api.controller.ro.UserRO;
 import com.poketeam.api.service.UsersService;
