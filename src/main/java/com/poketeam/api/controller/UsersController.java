@@ -6,6 +6,7 @@ import com.poketeam.api.controller.ro.UserRO;
 import com.poketeam.api.service.UsersService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
+import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @RequestMapping("/users")
@@ -22,10 +23,10 @@ public class UsersController {
                 .map(usersMapper::mapToUserRO);
     }
 
-    //TODO: Implement the following methods JENNY
     @GetMapping("/{id}")
     public Mono<UserRO> getUserById(@PathVariable("id") Long id) {
-        return Mono.just(UserRO.builder().id(id).username("user").build());
+        return usersService.getUserById(id)
+                .map(usersMapper::mapToUserRO);
     }
 
     //TODO: Implement the following methods (DO NOT RETURN PASSWORDS) TERRY
@@ -34,5 +35,9 @@ public class UsersController {
         return Mono.just(UserRO.builder().username(username).build());
     }
 
-    //TODO: Implement the method to get ALL users (DO NOT RETURN PASSWORDS) JENNY
+    @GetMapping("/all")
+    public Flux<UserRO> getAllUsers() {
+        return usersService.getAllUsers()
+                .map(usersMapper::mapToUserRO);
+    }
 }

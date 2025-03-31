@@ -4,6 +4,7 @@ import com.poketeam.api.model.User;
 import com.poketeam.api.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @Service
@@ -14,5 +15,13 @@ public class UsersService {
 
     public Mono<User> createUser(User user) {
         return userRepository.save(user);
+    }
+
+    public Mono<User> getUserById(Long id) {
+        return userRepository.findById(id);
+    }
+
+    public Flux<User> getAllUsers() {
+        return userRepository.findAll();
     }
 }
