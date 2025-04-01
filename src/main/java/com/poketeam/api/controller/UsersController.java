@@ -35,7 +35,7 @@ public class UsersController {
         return Mono.just(UserRO.builder().username(username).build());
     }
 
-    @GetMapping("/all")
+    @GetMapping()
     public Flux<UserRO> getAllUsers() {
         return usersService.getAllUsers()
                 .map(usersMapper::mapToUserRO);
