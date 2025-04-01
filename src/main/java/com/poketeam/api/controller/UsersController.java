@@ -29,12 +29,6 @@ public class UsersController {
                 .map(usersMapper::mapToUserRO);
     }
 
-    //TODO: Implement the following methods (DO NOT RETURN PASSWORDS) TERRY
-    @GetMapping()
-    public Mono<UserRO> getUserByUsername(@RequestParam("username") String username) {
-        return Mono.just(UserRO.builder().username(username).build());
-    }
-
     @GetMapping()
     public Flux<UserRO> getAllUsers() {
         return usersService.getAllUsers()
