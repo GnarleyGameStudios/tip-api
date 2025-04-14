@@ -9,10 +9,8 @@ import org.mapstruct.Mapping;
 @Mapper(componentModel = "spring")
 public interface UsersMapper {
 
-    @Mapping(target = "user_name", source = "username")
     User mapToUser(NewUserRO newUserRO);
 
-    @Mapping(target = "username", source = "user_name")
-    @Mapping(target = "id", source = "user_id")
+    @Mapping(target = "id", source = "userId")
     UserRO mapToUserRO(User user);
 }

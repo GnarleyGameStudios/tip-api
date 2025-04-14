@@ -21,6 +21,8 @@ public class UsersService {
         return userRepository.findById(id);
     }
 
+    public Mono<User> getUserByUsername(String username) { return userRepository.findByUsername(username); }
+
     public Flux<User> getAllUsers() {
         return userRepository.findAll();
     }

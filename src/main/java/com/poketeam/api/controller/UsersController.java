@@ -29,6 +29,12 @@ public class UsersController {
                 .map(usersMapper::mapToUserRO);
     }
 
+    @GetMapping(params = "username")
+    public Mono<UserRO> getUserByUsername(@RequestParam("username") String username) {
+        return usersService.getUserByUsername(username)
+                .map(usersMapper::mapToUserRO);
+    }
+
     @GetMapping()
     public Flux<UserRO> getAllUsers() {
         return usersService.getAllUsers()
