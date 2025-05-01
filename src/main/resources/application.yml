@@ -3,13 +3,13 @@ server:
 
 spring:
   r2dbc:
-    url: r2dbc:postgresql://yamanote.proxy.rlwy.net:41494/tip
+    url: r2dbc:postgresql://yamanote.proxy.rlwy.net:41494/tip?ssl=true
     username: postgres
     password: kuPzFEOZaHbVqheOOCMOSDDkfoHOWoOk
 
-jpa:
-  hibernate:
-    ddl-auto: update
+  jpa:
+    hibernate:
+      ddl-auto: update
 
 springdoc:
   api-docs:
